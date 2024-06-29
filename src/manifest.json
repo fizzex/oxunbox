@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Oxunbox",
   "description": "Put the 'fun' back into 'exam results'.",
   "developer": {
@@ -12,7 +12,10 @@
     "96": "icon96.png"
   },
   "web_accessible_resources": [
-    "star.svg"
+    {
+      "resources": ["star.svg"],
+      "matches": ["https://evision.ox.ac.uk/*"]
+    }
   ],
   "content_scripts": [
     {
