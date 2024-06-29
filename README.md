@@ -2,8 +2,7 @@
 
 An addon to let you reveal your Oxford exam results in Student Self-Service using a sort of spin-the-wheel system.
 
-<img src="res/screen1.png" alt="A screenshot of Oxunbox" width="300"/>
-<img src="res/screen2.png" alt="A screenshot of Oxunbox" width="300"/>
+<div style="display: flex; flex-direction: row;"><img src="res/screen1.png" alt="A screenshot of Oxunbox" width="300" /><img src="res/screen2.png" alt="A screenshot of Oxunbox" width="300" /></div>
 
 ## Installation
 
