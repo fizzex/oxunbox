@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Oxunbox",
+  "description": "Put the 'fun' back into 'exam results'.",
+  "version": "0.0.1",
+  "icons": {
+    "48": "icons/icon.png",
+    "96": "icons/icon@2x.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://evision.ox.ac.uk/urd/sits.urd/run/SIW_POD.start_url?*"],
+      "js": ["./run.js"] 
+    }
+  ]
+}
