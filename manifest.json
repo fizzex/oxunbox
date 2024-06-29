@@ -2,16 +2,27 @@
   "manifest_version": 2,
   "name": "Oxunbox",
   "description": "Put the 'fun' back into 'exam results'.",
+  "developer": {
+    "name": "fizzex",
+    "url": "https://github.com/fizzex"
+  },
   "version": "0.0.1",
   "icons": {
-    "48": "icons/icon.png",
-    "96": "icons/icon@2x.png"
+    "48": "icon48.png",
+    "96": "icon96.png"
   },
-
+  "web_accessible_resources": [
+    "star.svg"
+  ],
   "content_scripts": [
     {
       "matches": ["https://evision.ox.ac.uk/urd/sits.urd/run/SIW_POD.start_url?*"],
-      "js": ["./run.js"] 
+      "js": ["./run.js"]
+    },
+    {
+      "matches": ["https://evision.ox.ac.uk/urd/sits.urd/run/SIW_POD.start_url?*"],
+      "js": ["./init.js"],
+      "run_at": "document_start"
     }
   ]
 }

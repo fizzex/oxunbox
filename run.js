@@ -20,7 +20,7 @@ const getRandomPossibility = (value) => {
 
   console.log(value);
   if (value.trim().search(/class/i) !== -1) {
-    return randomChoice(["First Class", "Second Class", "Third Class"]);
+    return randomChoice(["First Class", "Second Class - Upper", "Second Class - Lower", "Third Class"]);
   }
 
   if (value.trim().search(/(pass|fail)/i) !== -1) {
@@ -38,8 +38,12 @@ const valueToColours = (value) => {
       bg = "linear-gradient(169deg, rgba(254,255,159,1) 0%, rgba(255,241,55,1) 26%, rgba(200,153,0,1) 100%)";
       shadow = "rgba(255,255,255,0.5) 5px 10px 30px 0px inset";
       color = "white";
-    } else if (value.search(/second/i) !== -1) {
+    } else if (value.search(/upper/i) !== -1) {
       bg = "linear-gradient(169deg, rgba(251,42,51,1) 0%, rgba(168,19,46,1) 26%, rgba(85,35,51,1) 100%)";
+      shadow = "rgba(255,255,255,0.5) 5px 10px 30px 0px inset";
+      color = "white";
+    } else if (value.search(/lower/i) !== -1) {
+      bg = "linear-gradient(169deg, rgba(251,42,220,1) 0%, rgba(185,73,191,1) 26%, rgba(73,45,82,1) 100%)";
       shadow = "rgba(255,255,255,0.5) 5px 10px 30px 0px inset";
       color = "white";
     } else if (value.search(/(third|pass)/i) !== -1) {
@@ -254,6 +258,10 @@ const startUnbox = (resultValue, onFinish) => {
 
     inside.textContent = value;
 
+    if (value.length > 10) { 
+      inside.style.fontSize = "48px";
+    }
+
     // box stylisation
     const { bg, shadow, color } = valueToColours(value);
     box.style.background = bg;
@@ -328,6 +336,7 @@ const main = () => {
   // Early exit if on wrong page
   title = document.querySelector("h1");
   if (!title || title.innerHTML.trim() !== "Academic and Assessments Results") {
+    document.body.style.display = "unset";
     return;
   }
 
@@ -445,6 +454,8 @@ const main = () => {
 
   const detailed = tables[2];
   hide(detailed, [4, 5], 2);
+
+  document.body.style.display = "unset";
 }
 
 
