@@ -284,7 +284,8 @@ const startUnbox = (resultValue, onFinish) => {
     const { bg, shadow, color } = valueToColours(value);
     box.style.background = bg;
     box.style.boxShadow = shadow;
-    inside.style.color = color;
+    // inside.style.color = color;
+    inside.style.filter = "drop-shadow(2px 2px 0 rgba(255,255,255,0.3))";
   }  
 
   positioningContainer.style.display = "flex";  
@@ -318,7 +319,8 @@ const startUnbox = (resultValue, onFinish) => {
     const { bg, _, color } = valueToColours(resultValue);
     svgContainer.style.background = bg;
     svgContainer.style.filter = "drop-shadow(0px 0px 2px black)";
-    displayBoxContent.style.color = color;
+    // displayBoxContent.style.color = color;
+    displayBoxContent.style.filter = "drop-shadow(2px 2px 0 rgba(255,255,255,0.3))";
     displayBoxContent.textContent = resultValue;
   
     displayBoxContainer.style.display = "flex";

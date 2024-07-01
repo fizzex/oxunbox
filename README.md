@@ -8,8 +8,8 @@ An addon to let you reveal your Oxford exam results in Student Self-Service usin
 
 You can install this addon from the web store of your choice.
 
-* Chrome: [awaiting approval]. For now, [follow the instructions here](https://github.com/fizzex/oxunbox/releases/latest).
-* Firefox: https://addons.mozilla.org/en-GB/firefox/addon/oxunbox/.
+* Chrome: https://chromewebstore.google.com/detail/oxunbox/jcanmcdhpdnkmokdnoflojmpanibagjo
+* Firefox: https://addons.mozilla.org/en-GB/firefox/addon/oxunbox/
 
 ## Manual installation from source
 
@@ -25,11 +25,11 @@ Download this repository from the link at the top of the page. Then:
 ### Firefox
 
 1. Go to `about:debugging`
-1. Select 'This Firefox' 
+1. Select 'This Firefox' in the menu on the left 
 1. Click the 'load temporary addon' button
 1. Select the downloaded `src/manifest.json` file
 
 ## Contributing
 
-Pull requests are welcome. 
+Pull requests & bug reports are welcome. 
 
